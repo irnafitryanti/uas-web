@@ -14,7 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('kriterias', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('kode')->unique();
+            $table->string('nama_kriteria');
+            $table->enum('jenis',['Benefit','Cost']);
+            $table->float('bobot');
             $table->timestamps();
         });
     }
