@@ -1,19 +1,16 @@
-@extends('layouts.app')
-
+@extends('frontend.home')
+@section('heading', 'Dashboard')
+@section('page')
+    <li class="breadcrumb-item active">Admin</li>
+    <li class="breadcrumb-item active">Dashboard</li>
+@endsection
 @section('content')
-    <div class="col-md-8">
-        <div class="card border-0 shadow rounded">
-            <div class="card-body">
-                Selamat Datang <strong>{{ auth()->user()->name }}</strong>
-                <hr>
-                <a href="{{ route('logout') }}" style="cursor: pointer"
-                    onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();"
-                    class="btn btn-md btn-primary">LOGOUT</a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
-            </div>
-        </div>
-    </div>
+ <div class="row">
+
+
+    <h1 class="h3 mb-4 text-gray-800">
+        Selamat Datang {{ Auth::user()->name }}
+    </h1>
+
+</div>
 @endsection

@@ -9,10 +9,5 @@ class Kriteria extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'kode',
-        'nama_kriteria',
-        'jenis',
-        'bobot'
-    ];
+    
 }
