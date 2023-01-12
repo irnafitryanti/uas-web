@@ -154,4 +154,5 @@ class MahasiswaController extends Controller
 
         return redirect('/mahasiswa')->with('success', 'Berhasil Menghapus data');
     }
+    //
 }
